@@ -7,41 +7,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shopping Express</title>
   <link rel="stylesheet" href="./css/style.css" />
-  <!-- Latest compiled and minified CSS -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" /> -->
+ 
+    <!--------
+        latest bootstrap 
+    ---------->
 
-    <!-- latest bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- latest bootstrap -->
-
-  <!-- google Montserrat  font  -->
+   
+  <!----------
+        google Montserrat  font  
+  ------------->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <header></header>
-  <main class="main">
-<!-- 
-    <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
-      </div>
-    </div> -->
+  <header>
 
-    <!-- my search field -->
+    <!-------
+         search area
+    ---------->
     <div class="input-group my-5 w-50 m-auto">
       <input type="text" class="form-control" placeholder="Search Product" aria-label="Recipient's username" aria-describedby="button-addon2">
       <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
     </div>
-    <!-- my search field -->
 
+  </header>
+
+  <main class="main">
+
+    <!-----
+          card area 
+    -------->
 
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
@@ -76,7 +74,7 @@
               </tr>
               <tr>
                 <th>Delivery-Charge:</th>
-                <td>$ <span id="delivery-charge">0</span></td>
+                <td>$ <span id="delivery-charge">20</span></td>
                 <td></td>
                 <td></td>
               </tr>
@@ -101,36 +99,29 @@
     </div>
   </main>
 
-<!-- botstrap modal -->
+  <!------
+    bootstrap Modal 
+  -------->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div id="modalData" class="modal-content">
 
-<!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
-</button> -->
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div id="modalData" class="modal-content">
-
-    
-      
+      </div>
     </div>
   </div>
-</div>
-<!-- botstrap modal -->
 
-
-  <footer></footer>
-
-  <!-- bootstrap bundal script -->
+  <!------------
+     bootstrap bundle script 
+  -------------------->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <!-- bootstrap bundal script -->
-
-
-  <!-- add javascript  file  -->
+  
+  <!---------
+        add javascript  file  
+    ----------->
   <script src="./js/app.js"></script>
+
+  <footer></footer>
 </body>
 
 </html>
