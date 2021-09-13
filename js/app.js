@@ -20,10 +20,12 @@ const showProducts = (products) => {
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
       <h2>Price: $ ${product.price}</h2>
+      
       <p>Product rating : ${product.rating.rate}</p>
       <p>rating count: ${product.rating.count}</p>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button onclick="loadProducts2()" id="details-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-danger">Details</button></div>
+      
+      <button onclick="loadProducts2(${product.id})" id="details-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-danger">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
@@ -49,13 +51,20 @@ const getInputValue = (id) => {
 
 // face agin me
 
-const loadProducts2 = () => {
-  const url = `https://fakestoreapi.com/carts/5`;
+// const newii = addToCart(`${product.id}`)
+// console.log(newii);
+
+
+const loadProducts2 = (id) => {
+
+  const url = `https://fakestoreapi.com/products/${id}`;
   fetch(url)
+          //  console.log(url);
     .then((response1) => response1.json())
    
     .then((data1) => modalOpener(data1));
-     // .then((data1) => console.log(data1.products[1]));
+    //  .then((data1) => console.log(data1.products[1]));
+    //  .then((data1) => console.log(data1));
 };
 
 const modalOpener = info =>{
@@ -64,18 +73,17 @@ const modalOpener = info =>{
   console.log(`info.${kika} = ${info[kika]}`);
 
 
-
 const modalInformation = document.getElementById('modalData');
 
 modalInformation.innerHTML = `
 
 
 <div class="modal-header">
-<h5 class="modal-title" id="staticBackdropLabel">name ${info.date} </h5>
+<h5 class="modal-title" id="staticBackdropLabel">Title: ${info.title} </h5>
 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
-<div class="modal-body"> More Details: 
-<p>Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday</p>
+<div class="modal-body"> Description: 
+<p>${info.description}</p>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
