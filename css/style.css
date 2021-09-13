@@ -43,6 +43,7 @@ body {
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
   border: 1px solid cyan;
+  background-color: #FFE4C4;
 }
 .product-image {
   width: 150px;
