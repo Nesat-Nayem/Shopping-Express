@@ -45,7 +45,7 @@ const addToCart = (id, price) => {
 
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
-  const converted = parseInt(element);
+  const converted = parseFloat(element);
   return converted;
 };
 
@@ -80,10 +80,10 @@ modalInformation.innerHTML = `
 
 //``` main price update function   ```//
 
-const updatePrice = (id, value) => {
+const updatePrice = (id,value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
-  const total = convertedOldPrice + convertPrice;
+  const total = parseFloat(convertedOldPrice) + parseFloat(convertPrice);
   document.getElementById(id).innerText = (total).toFixed(2);
 };
 
