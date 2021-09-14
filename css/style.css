@@ -25,6 +25,15 @@ body {
   border-radius: 25px;
   margin-left: 20px;
 }
+h2{
+  color: #0909FF;
+}
+h3{
+  color:#F52887;
+}
+h6{
+  color:#F67280;
+}
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
